@@ -1,0 +1,47 @@
+#########  Select queries  >>> syntax  >>      SELECT "column_name" FROM "table_name";       ##########
+""""""""This example shows the Emp_ID, First_Name, Last_Name, Salary, and City of those employees from the Employee_details table whose Salary is 100000. 
+The output shows all the specified details according to the ascending alphabetical order of Last_Name."""""
+                                     SELECT Emp_ID, First_Name, Last_Name, Salary, City  
+                                     FROM Employee_details  
+                                     WHERE Salary = 100000  
+                                     ORDER BY Last_Name  
+                                     
+                                     
+#########  update queries  >>> syntax  >>      UPDATE table_name  
+SET column_name1 = new_value_1, column_name2 = new_value_2, ...., column_nameN = new_value_N  [ WHERE  CONDITION ]; #########
+""""""""This example changes the Salary of those employees of the Employee_details table whose Emp_ID is 10 in the table.""""""""""" 
+                                     UPDATE Employee_details  
+                                     SET Salary = 100000  
+                                     WHERE Emp_ID = 10;  
+                                     
+
+#########  Delete queries  >>> syntax  >>     DELETE FROM table_name  [ WHERE CONDITION ];  #########
+""""""""This example deletes the record of those employees from the Employee_details table whose First_Name is Sumit in the table.""""""""""" 
+                                     DELETE FROM Employee_details  
+                                     WHERE First_Name = 'Sumit';
+                                     
+                                     
+#########  create table queries  >>> syntax  >>     CREATE TABLE table_name  
+                                                    (  column_name1 data_type [column1 constraint(s)],  
+                                                    column_name2 data_type [column2 constraint(s)],  
+                                                    .....  
+                                                    .....,  
+                                                    column_nameN data_type [columnN constraint(s)],  
+                                                    PRIMARY KEY(one or more col)  
+                                                    );   #########
+""""""""This example creates the table Employee_details with five columns or fields in the SQL database. The fields in the table are Emp_Id,
+First_Name, Last_Name, Salary, and City. The Emp_Id column in the table acts as a primary key, which means that the Emp_Id column 
+cannot contain duplicate values and null values.""""""""""" 
+                                     CREATE TABLE Employee_details(  
+                                     Emp_Id NUMBER(4) NOT NULL,  
+                                     First_name VARCHAR(30),  
+                                     Last_name VARCHAR(30),  
+                                     Salary Money,  
+                                     City VARCHAR(30),  
+                                     PRIMARY KEY (Emp_Id)  
+                                     );   
+                                     
+                                     
+    
+                                     
+                                     
